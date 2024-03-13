@@ -1,0 +1,225 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+
+local Window = OrionLib:MakeWindow({Name = "teste", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+
+
+local Tab = Window:MakeTab({
+    Name = "Tp",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+
+
+
+
+local Section = Tab:AddSection({
+    Name = "teleporte cômodos"
+})
+
+
+
+Tab:AddButton({
+    Name = "jardim",
+    Callback = function()
+              print("button pressed")
+
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Maximus.lua"))()
+
+LSU.TeleportPlayer(30,4,-114)
+
+      end    
+})
+
+
+Tab:AddButton({
+    Name = "cozinha",
+    Callback = function()
+              print("button pressed")
+
+
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Maximus.lua"))()
+
+LSU.TeleportPlayer(23,8,-96)
+      end    
+})
+
+Tab:AddButton({
+    Name = "mesa",
+    Callback = function()
+              print("button pressed")
+
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Maximus.lua"))()
+
+LSU.TeleportPlayer(-14,8,-91)
+
+      end    
+})
+
+
+
+Tab:AddButton({
+    Name = "primeiro andar",
+    Callback = function()
+              print("button pressed"
+
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Maximus.lua"))()
+
+
+LSU.TeleportPlayer(9,13,-46)
+
+
+
+
+      end    
+})
+
+Tab:AddButton({
+    Name = "local seguro 1",
+    Callback = function()
+              print("button pressed")
+
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Maximus.lua"))()
+
+
+LSU.TeleportPlayer(-25,20,-79)
+
+LSU.Anchor(true)
+
+      end    
+})
+
+
+Tab:AddButton({
+    Name = "local seguro 2 ",
+    Callback = function()
+              print("button pressed")
+  
+
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Maximus.lua"))()
+
+
+LSU.TeleportPlayer(0,43,-86)
+
+
+LSU.Anchor(true)
+
+End
+})
+
+
+Tab:AddButton({
+    Name = "quarto dos pais!",
+    Callback = function()
+              print("button pressed")
+
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Maximus.lua"))()
+
+
+LSU.TeleportPlayer(-5,32,-75)
+
+
+LSU.Anchor(false)
+
+      end    
+})
+
+local Window = OrionLib:MakeWindow({Name = "teste", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+
+
+local Tab = Window:MakeTab({
+    Name = "EXTRAS Y CREDITOS",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+
+Tab:AddButton({
+
+    Name = "Creditos",
+
+    Callback = function()
+
+
+
+              OrionLib:MakeNotification({
+
+    Name = "Creditos.",
+
+    Content = "Script feito por Frost, Riot, Ogeid e myterzin\nScript feito por Frost, Riot, Ogeid e myterzin",
+
+    Image = "rbxassetid://4483345998",
+
+    Time = 15
+
+
+
+})
+
+      end
+
+Tab:AddButton({
+	Name = "IY",
+	Callback = function()
+      		print("button pressed")
+
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Maximus.lua"))()
+
+
+LSU.IY()
+
+  	end    
+})
+
+
+
+Tab:AddButton({
+    Name = "Noclip",
+    Callback = function()
+        local Noclip = nil
+        local Clip = nil
+        
+        local function noclip()
+            Clip = false
+            local function Nocl()
+                if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+                    for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                        if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+                            v.CanCollide = false
+                        end
+                    end
+                end
+                wait(0.21)
+            end
+            Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+        end
+        
+        local function clip()
+            if Noclip then Noclip:Disconnect() end
+            Clip = true
+        end
+        
+        noclip()
+      end    
+})
+
+
+
+Tab:AddButton({
+	Name = "FLY",
+	Callback = function()
+      		print("button pressed")
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+
+  	end    
+})
+
+
+
+OrionLib:Init()
